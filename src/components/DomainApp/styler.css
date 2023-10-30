@@ -1,0 +1,13 @@
+.styleShadow {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+  }
+
+/* In your CSS file (e.g., styles.css) */
+.card-appear {
+  opacity: 0;              /* Initially, the card is invisible */
+  transition: opacity 0.9s ease-in-out; /* Transition effect with a duration of 0.5 seconds */
+}
+
+.card-appear.appear {
+  opacity: 1; /* When the 'appear' class is added, the card becomes visible */
+}

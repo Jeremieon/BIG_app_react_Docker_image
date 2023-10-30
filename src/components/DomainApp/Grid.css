@@ -1,0 +1,14 @@
+/* Grid.css */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    padding: 16px;
+  }
+  
+  .grid-item {
+    background-color: lightblue;
+    padding: 16px;
+    text-align: center;
+  }
+  
