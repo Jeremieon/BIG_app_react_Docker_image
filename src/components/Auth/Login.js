@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-const LoginPage = ({onLogin}) => {
+const LoginPage = () => {
     
     const [loginForm, setLoginform] = useState({
-        email: "",
+        username: "",
         password: "",
       });
 
@@ -17,14 +17,13 @@ const LoginPage = ({onLogin}) => {
       await axios
         .post("http://127.0.0.1:8000/login", loginForm) // Replace with your actual API endpoint
         .then((response) => {
-          console.log(response.data);
           // Store the token in local storage or a cookie for future API requests
           localStorage.setItem("auth_token", response.data.access_token);
           localStorage.setItem(
             "auth_token_type",
             response.data.token_type
           );
-          onLogin()
+          window.location.href = '/home';
         })
         .catch((error) => {
           // Handle login error
@@ -40,8 +39,8 @@ const LoginPage = ({onLogin}) => {
           <input
             type="text"
             placeholder="example@xyz.com"
-            value={loginForm.email}
-            onChange={(e) => setLoginform({ ...loginForm, email: e.target.value })}
+            value={loginForm.username}
+            onChange={(e) => setLoginform({ ...loginForm, username: e.target.value })}
           />
         </div>
         <div>

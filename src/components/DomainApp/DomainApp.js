@@ -2,7 +2,7 @@ import React from "react";
 import DomainGetter from "./GetDomain";
 import NavigationBar from "./NavBar";
 
-function App() {
+function DomainApp() {
   const pageStyle = {
     backgroundColor: '#FFF8F0', // Set your desired background color here
     height: '190vh', // Ensure the background covers the entire viewport height
@@ -15,4 +15,4 @@ function App() {
   );
 }
 
-export default App;
+export default DomainApp;
