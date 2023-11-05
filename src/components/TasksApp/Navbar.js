@@ -1,5 +1,4 @@
 import React from 'react';
-import Logout from './Logout';
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -28,7 +27,7 @@ const Navbar = () => {
               <a className="nav-link" href="/contact">Contact</a>
             </li>
             <li className="nav-item justify-item-center">
-              <Logout/>
+              {/* <Logout/> */}
             </li>
           </ul>
         </div>

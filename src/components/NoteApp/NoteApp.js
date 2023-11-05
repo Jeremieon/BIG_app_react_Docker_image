@@ -1,21 +1,18 @@
 import { useState, useEffect, createContext } from "react";
 import axios from "axios";
 
-import AddNote from "./components/AddNote";
-import NotesList from "./components/NotesList";
-
-import "./App.css";
-import "./utility.styles.css";
+import AddNote from "./AddNote";
+import NotesList from "./NotesList";
 
 export const NotesListUpdateFunctionContext = createContext(null);
 
-export default function App() {
+export default function NoteApp() {
     const [notes, setNotes] = useState([]);
     useEffect(() => {
       const getNotes = async () => {
               // The URL of the backend
         const API_URL = "http://localhost:8000";
-        const { data } = await axios.get(`${API_URL}/notes`);
+        const { data } = await axios.get(`${API_URL}/api/notes`);
         setNotes(data);
       };
       getNotes();

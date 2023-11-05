@@ -6,7 +6,7 @@ const DeleteTask = (props) => {
     const headers = {
         Authorization: `Bearer ${accessToken}`
     }
-    const apiUrl = 'http://localhost:8000/tasks/'; // Replace with your API URL
+    const apiUrl = 'http://localhost:8000/api/tasks/'; // Replace with your API URL
        
     const handleDelete = () => {
         try {

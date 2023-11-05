@@ -2,7 +2,7 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Navbar from './Navbar';
 import TaskList from './TaskList';
-function Home() {   
+function HomeTask() {   
 
   return (
     <div>
@@ -15,4 +15,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default HomeTask;

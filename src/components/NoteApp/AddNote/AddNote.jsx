@@ -1,7 +1,7 @@
 import { useState, useContext } from "react";
 import axios from "axios";
 
-import { NotesListUpdateFunctionContext } from "../../App";
+import { NotesListUpdateFunctionContext } from "../NoteApp";
 import "./AddNotes.styles.css";
 
 export default function AddNote() {
@@ -17,7 +17,7 @@ export default function AddNote() {
     if (title.length > 0 || noteBody.length > 0) {
       setIsFormSubmitting(true);
       const API_URL = "http://localhost:8000";
-      const { data } = await axios.post(`${API_URL}/note`, {
+      const { data } = await axios.post(`${API_URL}/api/note`, {
         title,
         note_body: noteBody,
       });

@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import axios from "axios";
 
-import { NotesListUpdateFunctionContext } from "../../App";
+import { NotesListUpdateFunctionContext } from "../NoteApp";
 import "./DeleteModal.styles.css";
 
 export default function DeleteModal({ noteId, showDeleteModal }) {

@@ -19,7 +19,7 @@ const TaskAdd = ({ addTask }) => {
   const handleTaskApp = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://127.0.0.1:8000/tasks/', taskData,{ headers });
+      const response = await axios.post('http://127.0.0.1:8000/api/tasks/', taskData,{ headers });
       if (response.status === 200) {
         addTask(taskData)
         setTaskData({

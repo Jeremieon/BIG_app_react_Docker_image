@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState, useContext } from "react";
-import { NotesListUpdateFunctionContext } from "../../App";
+import { NotesListUpdateFunctionContext } from "../NoteApp";
 //import { NoteViewer } from "./Note";
 
 import "./Note.styles.css";
@@ -14,16 +14,15 @@ export default function NoteEditor({ note, setNoteView }) {
     event.preventDefault();
     if (noteTitle.length > 0 || noteBody.length > 0) {
       const API_URL = "http://localhost:8000";
-      await axios.put(`${API_URL}/note/${id}`, {
+      await axios.put(`${API_URL}/api/note/${id}`, {
         title: noteTitle,
         note_body: noteBody,
       });
-      const { data } = await axios.get(`${API_URL}/notes`);
+      const { data } = await axios.get(`${API_URL}/api/notes`);
       setNotes(data);
       setNoteView("viewing");
     } else {
       setIsInvalidSave(true);
-      noteTitleInputRef.current.focus();
     }
   };
   return (
